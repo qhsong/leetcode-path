@@ -12,7 +12,6 @@ char* convert(char* s, int numRows) {
     for(i=1;i<numRows-1;i++){
         index=i;
         for(j=0;index<len;j++){
-            printf("%d,",index);
             result[count] = s[index];
             if(j%2 == 0){
                 index += 2*(numRows - i - 1);
@@ -21,7 +20,6 @@ char* convert(char* s, int numRows) {
             }
             count++;
         }
-        printf("|");
     }
     for(i=numRows-1;i<len;){
         result[count] = s[i];
