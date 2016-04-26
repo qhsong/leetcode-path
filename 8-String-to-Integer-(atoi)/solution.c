@@ -23,7 +23,6 @@ int myAtoi(char* str) {
                 if(str[i] >='0' && str[i]<='9'){
                     st = ST_NUMBER; 
                     result += str[i]-'0';
-                    printf("%d,%c,%d|", result,str[i],result);
                     if(flag==1&&result!=0) {result = -result;flag = 0;}
                 }
                 else{return 0;}
@@ -38,7 +37,6 @@ int myAtoi(char* str) {
                         result -= (str[i] -'0');
                     }
                     if(flag==1&&result!=0) {result = -result;flag = 0;}
-                    printf("%d,%c,%d|", result,str[i],result);
                     if(result/10 != tmp){
                         if(tmp>0) return INT_MAX;
                         return INT_MIN;
