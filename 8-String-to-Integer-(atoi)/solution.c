@@ -1,6 +1,6 @@
 enum STATUS {ST_START, ST_FLAG, ST_NUMBER};
 
-//"-2147483648","-0","   -+2", "   -0000 12","-0013a34","    -00134",
+//"-2147483648","-0","   -+2", "   -0000 12","-0013a34","    -00134","MAX_INT","MIN_INT"
 int myAtoi(char* str) {
     int result = 0, i, flag = 0;
     int len = strlen(str);
