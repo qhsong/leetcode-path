@@ -5,7 +5,6 @@ int maxArea(int* height, int heightSize) {
         height[i]>height[j]?j--:i++;
         int size = (height[i]>height[j]?height[j]:height[i])*(j-i);
         max = size>max?size:max;
-        printf("%d|",max);
     }
     return max;
 }
