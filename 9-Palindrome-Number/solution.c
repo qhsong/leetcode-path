@@ -10,7 +10,6 @@ bool isPalindrome(int x) {
     
     int i=0;
     for(i=0;i<count/2 ;i++) {
-        printf("%d, %d|", x,x/((int)pow(10,(count-1-2*i))));
         if(x%10 != x/((int)pow(10,(count-1-2*i)))){
             return false;
         }
