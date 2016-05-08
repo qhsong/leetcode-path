@@ -44,6 +44,6 @@ char** generateParenthesis(int n, int* returnSize) {
     s[1] = '\0';
     char **result=NULL;
     generatorParenthesisHelper(s, 1, 0, n, &result, returnSize);
-    printf("%d|", result);
+    //printf("%d|", result);
     return result;
 }
