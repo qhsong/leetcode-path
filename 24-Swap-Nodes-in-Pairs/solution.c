@@ -5,6 +5,10 @@
  *     struct ListNode *next;
  * };
  */
+ /*
+ 
+//False, we should not modify the value of list
+//Hack way
 struct ListNode* swapPairs(struct ListNode* head) {
     struct ListNode *p=head;
     while(p!= NULL && p->next != NULL) {
@@ -16,3 +20,23 @@ struct ListNode* swapPairs(struct ListNode* head) {
     }
     return head;
 }
+*/
+struct ListNode* swapPairs(struct ListNode* head) {
+    struct ListNode *r,*p, *q;
+    r = p = q = head;
+    while(p && p->next) {
+        q = p->next;
+        p->next = q->next;
+        q->next = p;
+        if(p == head) {
+            head = q;
+        }else{
+            r->next = q;
+        }
+        r = p;
+        p = p->next;
+    }
+    return head;
+}
+
+
